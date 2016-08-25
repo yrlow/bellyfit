@@ -8,6 +8,8 @@ class CreatePlayers < ActiveRecord::Migration
       t.string :skill_level
       t.string :contact_detail
       t.string :location_description
+      t.references :team_id, index: true, foreign_key: true
+      t.references :booking_id, index: true, foreign_key: true
 
       t.timestamps null: false
     end
